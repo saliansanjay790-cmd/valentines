@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Deekshitha 💖</title>
+<style>
+body{
+  margin:0;
+  font-family:Poppins,sans-serif;
+  background:linear-gradient(#ffdee9,#ffc3a0);
+  text-align:center;
+  overflow-x:hidden;
+}
+h1,h2{color:#d63384;}
+button{
+  padding:15px 30px;
+  font-size:18px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+}
+#yes{background:#ff4d6d;color:white;}
+#no{background:#6c757d;color:white;position:absolute;}
+.gallery img{
+  width:220px;
+  margin:10px;
+  border-radius:20px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+.heart,.rose{
+  position:fixed;
+  animation:float 6s linear infinite;
+}
+@keyframes float{
+  from{bottom:-50px;}
+  to{bottom:110%;}
+}
+#content{display:none;padding:20px;}
+.letter{
+  background:white;
+  border-radius:20px;
+  padding:20px;
+  margin:30px auto;
+  max-width:600px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Deekshitha 💖</h1>
+<h2>Will you be my Valentine? 🌹</h2>
+
+<button id="yes" onclick="sayYes()">YES 💘</button>
+<button id="no" onmouseover="moveNo()">NO 😜</button>
+
+<audio id="music" src="music.mp3"></audio>
+
+<div id="content">
+
+  <h2>You just made Saathvik the happiest 🥹❤️</h2>
+
+  <p>⏳ We’ve been creating memories for  
+    <b><span id="days"></span></b> days 💕
+  </p>
+
+  <div class="gallery">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <img src="photo4.jpg">
+    <img src="photo5.jpg">
+    <img src="photo6.jpg">
+    <img src="photo7.jpg">
+  </div>
+
+  <div class="letter">
+    <h2>My Love Letter 💌</h2>
+    <p>
+      Dear Deekshitha,<br><br>
+      From the moment you came into my life,  
+      everything felt brighter and warmer 🌸  
+      This website is small, but my love for you is infinite ❤️  
+      Thank you for being my happiness, my smile, my everything 🌹  
+      <br><br>
+      Forever yours,<br>
+      <b>Saathvik 💖</b>
+    </p>
+  </div>
+
+</div>
+
+<script>
+function moveNo(){
+  no.style.left=Math.random()*80+"%";
+  no.style.top=Math.random()*80+"%";
+}
+
+function sayYes(){
+  alert("YAYYYY Deekshitha 💖\nYou just made Saathvik the happiest person ever 🥹🌹");
+  content.style.display="block";
+  music.play();
+}
+
+const start=new Date("2024-01-01");
+const now=new Date();
+days.innerText=Math.floor((now-start)/(1000*60*60*24));
+
+for(let i=0;i<25;i++){
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="💖";
+  h.style.left=Math.random()*100+"%";
+  h.style.animationDuration=(3+Math.random()*5)+"s";
+  document.body.appendChild(h);
+
+  let r=document.createElement("div");
+  r.className="rose";
+  r.innerHTML="🌹";
+  r.style.left=Math.random()*100+"%";
+  r.style.animationDuration=(4+Math.random()*5)+"s";
+  document.body.appendChild(r);
+}
+</script>
+
+</body>
+</html>
